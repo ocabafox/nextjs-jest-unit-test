@@ -2,15 +2,27 @@
   "name": "api-routes",
   "version": "1.0.0",
   "scripts": {
+    "migrate": "npx knex migrate:latest --knexfile database/knexfile.js",
+    "seed": "npx knex seed:run",
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "test": "jest --coverage --forceExit --detectOpenHandles"
   },
   "dependencies": {
+    "@babel/preset-env": "^7.13.12",
+    "dotenv": "^8.2.0",
+    "jest": "^26.6.3",
+    "knex": "^0.95.4",
+    "lab": "^18.0.2",
+    "lodash": "^4.17.21",
     "next": "latest",
+    "node-mocks-http": "^1.10.1",
+    "pg": "^8.5.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "swr": "0.1.18"
+    "swr": "0.1.18",
+    "ts-jest": "^26.5.4"
   },
   "license": "MIT"
 }

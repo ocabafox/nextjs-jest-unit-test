@@ -11,10 +11,10 @@ const fetcher = async (url) => {
   return data
 }
 
-export default function Person() {
+export default function User() {
   const { query } = useRouter()
   const { data, error } = useSWR(
-    () => query.id && `/api/people/${query.id}`,
+    () => query.id && `/api/user/get/${query.id}`,
     fetcher
   )
 

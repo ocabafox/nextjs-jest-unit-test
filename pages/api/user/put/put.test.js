@@ -10,7 +10,7 @@ describe('GET /api/put/user/[id]', () => {
     await runSeed(server);
   });
 
-  it('Should Update ID 1 named Luke Skywalker to Ricky Gwapo', async () => {
+  test('Should Update ID 1 named Luke Skywalker to Ricky Gwapo', async () => {
     const { req:firstReq, res:firstRes } = createMocks({
       method: 'PUT',
       query: {
